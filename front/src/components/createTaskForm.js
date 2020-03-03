@@ -7,6 +7,8 @@ function Example(props) {
   const [desc, setDesc] = useState("");
   const handleClose1 = () => {
     setShow(false);
+    setTitulo("")
+    setDesc("")
   };
   const handleClose = () => {
     setShow(false);

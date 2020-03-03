@@ -2,6 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Header from "./components/header";
+import Canvas from "./components/canvas";
 
-ReactDOM.render(<Header/>,  document.getElementById("root"));
+ReactDOM.render(<Canvas/>,  document.getElementById("root"));

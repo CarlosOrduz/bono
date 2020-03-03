@@ -1,22 +1,23 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 export default class Task extends React.Component {
 
     state = {
-        "titulo": "Tarea1",
-        "contenido": "llorar"
+      "task": this.props.task
       }
   render() {
     return (
-        <Card style={{ width: '18rem',margin:'10px' }}>
+        <Card style={{margin:'10px' }}>
         <Card.Body style={{padding: '0px'}}>
-        <Card.Header as="h5">{this.state.titulo}</Card.Header>
+        <Card.Header as="h5">{this.state.task.titulo}</Card.Header>
          
           <Card.Text>
-          {this.state.contenido}
+          {this.state.task.contenido}
           </Card.Text>
-          
-          <Card.Link href="#">Another Link</Card.Link>
+          <div className="text-right">
+          <Button variant="primary" style={{"borderRadius": "20px",height:"25px",width:"50px"}} onClick={() => this.props.onDelete(this.props.task.id)}>-</Button>
+          </div>
         </Card.Body>
       </Card>
     );
